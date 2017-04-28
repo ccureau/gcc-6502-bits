@@ -6,16 +6,29 @@ Build tools, tiny C library, etc. for gcc-6502 port.
 Prerequisites
 -------------
 
-You need to install cc65 in /usr (so ca65, ld65 and so on are present in /usr/bin/ca65 etc.) before building. On a
-Debian system you should also have all the prerequisites for building GCC installed, e.g.:
+The cc65 compiler (https://github.com/cc65/cc65) must be installed before building. Most Linux distributions have a 
+prepackaged cc65, but often it is outdated. 
+
+The default location for cc65 binaries is in /usr (so ca65, ld65 and so on are present in /usr/bin/ca65, etc). If installed
+in another location, set the CC65_PATH variable to the path where the binaries exist. For example:
+
+    $ CC65_PATH=/usr/local/cc65/bin build.sh ...
+
+On a Debian system you should also have all the prerequisites for building GCC installed, e.g.:
 
     # apt-get build-dep gcc-4.8
 
 or similar.
 
+For RedHat-based systems, install the requirements like so:
+
+    # yum install -y gcc gcc-c++ mpfr-devel gmp-devel libmpc-devel flex    
+
 For semi65x (the included simulator), you also need Boost development libraries:
 
     # apt-get install libboost-dev libboost-regex-dev
+or
+    # yum install -y boost boost-devel
 
 For running the GCC regression tests you will need to have DejaGNU installed:
 
