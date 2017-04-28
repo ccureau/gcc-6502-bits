@@ -6,33 +6,41 @@ Build tools, tiny C library, etc. for gcc-6502 port.
 Prerequisites
 -------------
 
-The cc65 compiler (https://github.com/cc65/cc65) must be installed before building. Most Linux distributions have a 
-prepackaged cc65, but often it is outdated. 
+**Install the cc65 compiler suite**
 
-The default location for cc65 binaries is in /usr (so ca65, ld65 and so on are present in /usr/bin/ca65, etc). If installed
-in another location, set the CC65_PATH variable to the path where the binaries exist. For example:
+Most Linux distributions have a prepackaged cc65, but often it is outdated. 
+
+The default location for cc65 binaries is in /usr (so ca65, ld65 and so on are present in /usr/bin/ca65, etc). If installed in another location, set the CC65_PATH variable to the path where the binaries exist. For example:
 
     $ CC65_PATH=/usr/local/cc65/bin build.sh ...
 
- - Install all the prerequisites for building GCC 
+**Install the prerequisites for building GCC**
 
     For Debian-based distros:
     # apt-get build-dep gcc-4.8
 
-    For RedHat-based distros
-    # yum install -y gcc gcc-c++ mpfr-devel gmp-devel libmpc-devel flex    
+    For RedHat-based distros:
+    # yum install -y gcc gcc-c++ mpfr-devel gmp-devel libmpc-devel flex
+
+**Install Boost development libraries**
 
 For semi65x (the included simulator), you also need Boost development libraries:
 
+    For Debian-based distros:
     # apt-get install libboost-dev libboost-regex-dev
-
-or
-
+    
+    For RedHat-based distros:
     # yum install -y boost boost-devel
+
+**Install DejaGNU (optional)**
 
 For running the GCC regression tests you will need to have DejaGNU installed:
 
+    For Debian-based distros:
     # apt-get install dejagnu
+    
+    For RedHat-based distros:
+    # yum install -y dejagnu
 
 Work in progress
 ----------------
