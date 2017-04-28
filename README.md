@@ -8,11 +8,7 @@ Prerequisites
 
 **Install the cc65 compiler suite**
 
-Most Linux distributions have a prepackaged cc65, but often it is outdated. 
-
-The default location for cc65 binaries is in /usr (so ca65, ld65 and so on are present in /usr/bin/ca65, etc). If installed in another location, set the CC65_PATH variable to the path where the binaries exist. For example:
-
-    $ CC65_PATH=/usr/local/cc65/bin build.sh ...
+Most Linux distributions have a prepackaged cc65, but often it is outdated. Should you run into issues, build the latest version from https://github.com/cc65/cc65.git
 
 **Install the prerequisites for building GCC**
 
@@ -59,6 +55,10 @@ Check out this repository, and check out the GCC repository proper as a subdirec
 Now build by running the build.sh script, e.g. as:
 
     $ ./build.sh 2>&1 | tee build.log
+
+The default location for cc65 binaries is in /usr (so ca65, ld65 and so on are present in /usr/bin/ca65, etc). If installed in another location, set the CC65_PATH variable to the path where the binaries exist. For example:
+
+    $ CC65_PATH=/usr/local/cc65/bin build.sh ...
 
 After a while, you should have a 6502 cross-compiler in a directory named 'prefix'.
 
