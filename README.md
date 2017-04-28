@@ -14,14 +14,12 @@ in another location, set the CC65_PATH variable to the path where the binaries e
 
     $ CC65_PATH=/usr/local/cc65/bin build.sh ...
 
-On a Debian system you should also have all the prerequisites for building GCC installed, e.g.:
+ - Install all the prerequisites for building GCC 
 
+    For Debian-based distros:
     # apt-get build-dep gcc-4.8
 
-or similar.
-
-For RedHat-based systems, install the requirements like so:
-
+    For RedHat-based distros
     # yum install -y gcc gcc-c++ mpfr-devel gmp-devel libmpc-devel flex    
 
 For semi65x (the included simulator), you also need Boost development libraries:
