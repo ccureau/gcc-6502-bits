@@ -27,7 +27,9 @@ For RedHat-based systems, install the requirements like so:
 For semi65x (the included simulator), you also need Boost development libraries:
 
     # apt-get install libboost-dev libboost-regex-dev
+
 or
+
     # yum install -y boost boost-devel
 
 For running the GCC regression tests you will need to have DejaGNU installed:
